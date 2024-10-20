@@ -37,6 +37,9 @@ spec:
             - name: http
               containerPort: 3000
               protocol: TCP
+            - name: http
+              containerPort: 4200
+              protocol: TCP
           envFrom:
             - configMapRef:
                 name: {{ include "postiz.fullname" . }}-config
